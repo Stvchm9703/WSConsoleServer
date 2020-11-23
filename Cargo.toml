@@ -1,0 +1,39 @@
+[package]
+name = "websocket_debug"
+version = "0.1.0"
+authors = ["Steven Cheng"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+log = "0.4"
+futures-util = { version = "0.3", default-features = false, features = ["async-await", "sink", "std"] }
+pin-project = "1.0"
+tokio-tungstenite = "*"
+futures-channel = "0.3"
+tokio = { version = "0.3", default-features = false, features = [
+  "io-util",
+  "io-std",
+  "macros",
+  "rt-multi-thread",
+  "stream",
+  "time",
+  "net",
+] }
+url = "2.0.0"
+log4rs = "0.13.0"
+chrono = "*"
+tungstenite = "*"
+native-tls = {optional = true, version = "0.2.0"}
+tokio-native-tls = { optional = true, version = "0.2"}
+
+
+[[bin]]
+name = "basic-ws"
+path = "src/main.rs"
+
+[[bin]]
+name = "autobahn"
+path = "src/autobahn.rs"

@@ -1,0 +1,34 @@
+[tasks.format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files"]
+
+[tasks.clean]
+command = "cargo"
+args = ["clean"]
+
+# default 
+[tasks.build]
+command = "cargo"
+args = ["build" ]
+
+
+[tasks.build-main]
+command = "cargo"
+args = ["build" , "--bin=basic-ws"  ]
+
+
+[tasks.build-main-rls]
+command = "cargo"
+args = ["build" , "--bin=basic-ws" , "--release"]
+
+
+[tasks.build-ab]
+command = "cargo"
+args = ["build" , "--bin=autobahn" ]
+
+
+[tasks.build-ab-rls]
+command = "cargo"
+args = ["build" , "--bin=autobahn", "--release" ]
+
