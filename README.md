@@ -1,0 +1,2 @@
+# WSConsoleServer
+Rust Base service 
